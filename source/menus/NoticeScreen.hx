@@ -101,6 +101,17 @@ class NoticeScreen extends MusicBeatState
 	
 	override function update(elapsed:Float) 
 	{	
+		#if mobile
+		for (touch in FlxG.touches.list) {
+		 if (touch.justPressed) //yes touch :)
+		 {
+            if (!FlxG.sound.music.playing) {
+                    FlxG.sound.playMusic(Paths.music('freakyMenu'));
+            }
+			FlxG.switchState(new MainMenuState());
+	         }
+		}
+		#else
 		super.update(elapsed);
 		timer += 1;
 		if (mmtw.volume < .5) {
@@ -113,6 +124,7 @@ class NoticeScreen extends MusicBeatState
 			FlxTween.tween(FlxG.camera, {zoom: 0.5, angle: 45}, 0.5, {ease: FlxEase.quadIn});
 			MusicBeatState.switchState(new menus.TitleState());
 		}
+		#end
 	}
 	override function destroy()
 	{
