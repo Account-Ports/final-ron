@@ -50,6 +50,11 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		super();
 
+		#if mobile
+    addVirtualPad(NONE, A_B);
+    addVirtualPadCamera(false);
+    #end
+
 		Conductor.songPosition = 0;
 
 		characterName = PlayState.SONG.player1;
