@@ -275,7 +275,9 @@ class PlayState extends MusicBeatState
 
 	var precacheList:Map<String, String> = new Map<String, String>();
 
+    #if windows
 	var video:MP4Handler = new MP4Handler();
+    #end
 
 	var satan:BGSprite;
 	var firebg:FlxSprite;
@@ -2033,6 +2035,12 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+
+		#if mobile
+   addMobileControls(false);
+   mobileControls.visible = false;
+   #end
+
 		if (curSong.toLowerCase() == 'holy-shit-dave-fnf')
 			kadeEngineWatermark.cameras = [camHUD];
 
@@ -2409,6 +2417,11 @@ class PlayState extends MusicBeatState
 
 	public function startCountdown():Void
 	{
+
+	#if mobile
+   mobileControls.visible = true;
+   #end
+
 		if(startedCountdown) {
 			return;
 		}
@@ -2742,11 +2755,9 @@ class PlayState extends MusicBeatState
 
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
-		#if MODS_ALLOWED
-		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
-		#else
+
 		if (OpenFlAssets.exists(file)) {
-		#end
+
 			var eventsData:Array<Dynamic> = Song.loadFromJson('events', songName).events;
 			for (event in eventsData) //Event Notes
 			{
@@ -3312,7 +3323,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
 
-		if (controls.PAUSE && startedCountdown && canPause)
+		if (controls.PAUSE #if mobile || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
 			persistentDraw = true;
@@ -4114,6 +4125,11 @@ var cameraTwn:FlxTween;
 	public var transitioning = false;
 	public function endSong():Void
 	{
+
+   #if mobile
+   mobileControls.visible = false;
+   #end
+
 		//Should kill you if you tried to cheat
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
