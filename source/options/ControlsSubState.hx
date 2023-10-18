@@ -71,6 +71,8 @@ class ControlsSubState extends MusicBeatSubstate {
 	public function new() {
 		super();
 
+		#if mobile
+   addVirtualPad(LEFT_FULL, A_B);
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFea71fd;
 		bg.screenCenter();
