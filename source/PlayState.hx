@@ -2053,7 +2053,7 @@ class PlayState extends MusicBeatState
 		}
 
 		if(doPush) 
-			luaArray.push(new FunkinLua(luaFile)));
+			luaArray.push(new FunkinLua(luaFile));
 		#end
 
         // SONG SPECIFIC SCRIPTS
@@ -2068,7 +2068,7 @@ class PlayState extends MusicBeatState
 		}
 
 		if(doPush) 
-			luaArray.push(new FunkinLua(luaFile)));
+			luaArray.push(new FunkinLua(luaFile));
 		#end
 
 		if (curSong.toLowerCase() == 'holy-shit-dave-fnf')
