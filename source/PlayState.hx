@@ -2041,6 +2041,36 @@ class PlayState extends MusicBeatState
    mobileControls.visible = false;
    #end
 
+        // 'GLOBAL' SCRIPTS - 'scripts.lua'
+        #if LUA_ALLOWED
+		var doPush:Bool = false;
+		var luaFile = Paths.getPreloadPath('scripts/Editable Combo and Ratings v2.2.lua');
+		if (OpenFlAssets.exists(luaFile))
+		{
+		doPush = true;
+		} else {
+		Application.current.window.alert(luaFile, 'NOT FOUND :C');
+		}
+
+		if(doPush) 
+			luaArray.push(new FunkinLua(luaFile));
+		#end
+
+        // SONG SPECIFIC SCRIPTS
+        #if LUA_ALLOWED
+        var doPush:Bool = false;
+		var luaFile = Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) +  '/' + 'script.lua');
+		if (OpenFlAssets.exists(luaFile))
+		{
+		doPush = true;
+		} else {
+		//Application.current.window.alert(luaFile, 'NOT FOUND :C');
+		}
+
+		if(doPush) 
+			luaArray.push(new FunkinLua(luaFile));
+		#end
+
 		if (curSong.toLowerCase() == 'holy-shit-dave-fnf')
 			kadeEngineWatermark.cameras = [camHUD];
 
