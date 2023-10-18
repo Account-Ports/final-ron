@@ -435,6 +435,9 @@ class FreeplayState extends MusicBeatState
 
 		if(ctrl)
 		{
+			#if mobile
+      removeVirtualPad();
+      #end
 			openSubState(new substates.GameplayChangersSubstate());
 		}
 		else if(space)
