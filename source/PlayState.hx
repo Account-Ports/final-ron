@@ -2041,7 +2041,7 @@ class PlayState extends MusicBeatState
    mobileControls.visible = false;
    #end
 
-        // SONG SPECIFIC SCRIPTS
+        /* // SONG SPECIFIC SCRIPTS
         #if LUA_ALLOWED
         var doPush:Bool = false;
 		var luaFile = Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) +  '/' + 'script.lua');
@@ -2054,7 +2054,7 @@ class PlayState extends MusicBeatState
 
 		if(doPush) 
 			luaArray.push(new FunkinLua(Asset2File.getPath(luaFile)));
-		#end
+		#end*/
 
 		if (curSong.toLowerCase() == 'holy-shit-dave-fnf')
 			kadeEngineWatermark.cameras = [camHUD];
