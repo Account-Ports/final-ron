@@ -94,37 +94,30 @@ class NoticeScreen extends MusicBeatState
 			
 			FlxTween.tween(screen, {y: screen.y + 20}, 1, {ease: FlxEase.circInOut, type: PINGPONG});
 			FlxTween.tween(screen, {angle: 3}, 2, {ease: FlxEase.backInOut, type: PINGPONG});
+
+		#if android
+                addVirtualPad(NONE, A);
+                #end
+
 		}
 		else
 			MusicBeatState.switchState(new menus.TitleState());
 	}
 	
 	override function update(elapsed:Float) 
-	{	
-		#if mobile
-		for (touch in FlxG.touches.list) {
-		 if (touch.justPressed) //yes touch :)
-		 {
-            if (!FlxG.sound.music.playing) {
-                    FlxG.sound.playMusic(Paths.music('freakyMenu'));
-            }
-			FlxG.switchState(new MainMenuState());
-	         }
-		}
-		#else
+	{
 		super.update(elapsed);
 		timer += 1;
 		if (mmtw.volume < .5) {
 			mmtw.volume += elapsed * .01;
 		}
 		
-		if (FlxG.keys.justPressed.ENTER){
+		if (controls.ACCEPT){
 			mmtw.destroy();
 			FlxG.sound.play(Paths.sound('resumeSong'));
 			FlxTween.tween(FlxG.camera, {zoom: 0.5, angle: 45}, 0.5, {ease: FlxEase.quadIn});
 			MusicBeatState.switchState(new menus.TitleState());
 		}
-		#end
 	}
 	override function destroy()
 	{
