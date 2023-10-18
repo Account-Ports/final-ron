@@ -37,7 +37,6 @@ class FlashingState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-	#if mobile
 		#if mobile
 		for (touch in FlxG.touches.list) {
 		 if (touch.justPressed && !leftState) //yes touch :)
