@@ -2041,21 +2041,6 @@ class PlayState extends MusicBeatState
    mobileControls.visible = false;
    #end
 
-        // 'GLOBAL' SCRIPTS - 'scripts.lua'
-        #if LUA_ALLOWED
-		var doPush:Bool = false;
-		var luaFile = Paths.getPreloadPath('scripts/script.lua');
-		if (OpenFlAssets.exists(luaFile))
-		{
-		doPush = true;
-		} else {
-		// Application.current.window.alert(luaFile, 'NOT FOUND :C');
-		}
-
-		if(doPush) 
-			luaArray.push(new FunkinLua(Asset2File.getPath(luaFile)));
-		#end
-
         // SONG SPECIFIC SCRIPTS
         #if LUA_ALLOWED
         var doPush:Bool = false;
