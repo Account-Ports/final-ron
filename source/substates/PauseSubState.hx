@@ -49,7 +49,6 @@ class PauseSubState extends MusicBeatSubstate
 
     #if mobile
     addVirtualPad(UP_DOWN, A);
-    addVirtualPadCamera(false);
     #end
 
 		super.create();
@@ -60,7 +59,7 @@ class PauseSubState extends MusicBeatSubstate
 		}
 		for (i in optionButtons) {
 			if (i.ID == curSelected) {i.animation.play("select");
-				if (FlxG.keys.justPressed.ENTER) {
+				if (controls.ACCEPT) {
 					var choice = optionArray[i.ID];
 					switch (choice) {
 						case "resume song": close();
