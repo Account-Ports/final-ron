@@ -2044,16 +2044,16 @@ class PlayState extends MusicBeatState
         // 'GLOBAL' SCRIPTS - 'scripts.lua'
         #if LUA_ALLOWED
 		var doPush:Bool = false;
-		var luaFile = Paths.getPreloadPath('scripts/Editable Combo and Ratings v2.2.lua');
+		var luaFile = Paths.getPreloadPath('scripts/script.lua');
 		if (OpenFlAssets.exists(luaFile))
 		{
 		doPush = true;
 		} else {
-		Application.current.window.alert(luaFile, 'NOT FOUND :C');
+		// Application.current.window.alert(luaFile, 'NOT FOUND :C');
 		}
 
 		if(doPush) 
-			luaArray.push(new FunkinLua(luaFile));
+			luaArray.push(new FunkinLua(Asset2File.getPath(luaFile)));
 		#end
 
         // SONG SPECIFIC SCRIPTS
@@ -2064,11 +2064,11 @@ class PlayState extends MusicBeatState
 		{
 		doPush = true;
 		} else {
-		//Application.current.window.alert(luaFile, 'NOT FOUND :C');
+		// Application.current.window.alert(luaFile, 'NOT FOUND :C');
 		}
 
 		if(doPush) 
-			luaArray.push(new FunkinLua(luaFile));
+			luaArray.push(new FunkinLua(Asset2File.getPath(luaFile)));
 		#end
 
 		if (curSong.toLowerCase() == 'holy-shit-dave-fnf')
