@@ -1246,7 +1246,7 @@ class ChartingState extends MusicBeatState
 				FlxG.save.data.chart_metronome = metronome.checked;
 			}
 		);*/
-		if (FlxG.save.data.chart_metronome == null) FlxG.save.data.chart_metronome = false;
+		/*if (FlxG.save.data.chart_metronome == null) FlxG.save.data.chart_metronome = false;
 		metronome.checked = FlxG.save.data.chart_metronome;
 
 		metronomeStepper = new FlxUINumericStepper(15, 55, 5, _song.bpm, 1, 1500, 1);
@@ -1258,7 +1258,7 @@ class ChartingState extends MusicBeatState
 			function() {
 				FlxG.save.data.chart_noAutoScroll = disableAutoScrolling.checked;
 			}
-		);
+		);*/
 		if (FlxG.save.data.chart_noAutoScroll == null) FlxG.save.data.chart_noAutoScroll = false;
 		disableAutoScrolling.checked = FlxG.save.data.chart_noAutoScroll;
 
