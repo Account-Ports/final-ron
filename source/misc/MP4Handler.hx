@@ -1,5 +1,6 @@
 package misc;
 
+#if windows
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxState;
@@ -213,3 +214,4 @@ class MP4Handler
 		ns.close();
 	 */
 }
+#end
