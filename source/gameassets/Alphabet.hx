@@ -227,8 +227,8 @@ class Alphabet extends FlxSpriteGroup
 			while(!finishedText) { 
 				timerCheck();
 			}
-			if(dialogueSound != null) dialogueSound.stop();
-			dialogueSound = FlxG.sound.play(soundDialog);
+			/*if(dialogueSound != null) dialogueSound.stop();
+			dialogueSound = FlxG.sound.play(soundDialog);*/
 		} else {
 			typeTimer = new FlxTimer().start(0.1, function(tmr:FlxTimer) {
 				typeTimer = new FlxTimer().start(speed, function(tmr:FlxTimer) {
@@ -325,8 +325,8 @@ class Alphabet extends FlxSpriteGroup
 				letter.x += 90;
 
 				if(tmr != null) {
-					if(dialogueSound != null) dialogueSound.stop();
-					dialogueSound = FlxG.sound.play(soundDialog);
+					/*if(dialogueSound != null) dialogueSound.stop();
+					dialogueSound = FlxG.sound.play(soundDialog);*/
 				}
 
 				add(letter);
