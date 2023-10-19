@@ -1215,7 +1215,7 @@ class ChartingState extends MusicBeatState
 		check_mute_vocals.checked = false;
 		check_mute_vocals.callback = function()
 		{
-			if(vocals != null) {
+			/*if(vocals != null) {*/
 				var vol:Float = 1;
 
 				if (check_mute_vocals.checked)
@@ -1268,7 +1268,7 @@ class ChartingState extends MusicBeatState
 		blockPressWhileTypingOnStepper.push(instVolume);
 
 		voicesVolume = new FlxUINumericStepper(instVolume.x + 100, instVolume.y, 0.1, 1, 0, 1, 1);
-		voicesVolume.value = vocals.volume;
+		/*voicesVolume.value = vocals.volume;*/
 		voicesVolume.name = 'voices_volume';
 		blockPressWhileTypingOnStepper.push(voicesVolume);
 
@@ -1304,10 +1304,10 @@ class ChartingState extends MusicBeatState
 		}
 
 		var file:Dynamic = Paths.voices(currentSongName);
-		vocals = new FlxSound();
+		/*vocals = new FlxSound();*/
 		if (Std.isOfType(file, Sound) || OpenFlAssets.exists(file)) {
-			vocals.loadEmbedded(file);
-			FlxG.sound.list.add(vocals);
+			/*vocals.loadEmbedded(file);*/
+			/*FlxG.sound.list.add(vocals);*/
 		}
 		generateSong();
 		FlxG.sound.music.pause();
@@ -1324,7 +1324,7 @@ class ChartingState extends MusicBeatState
 		{
 			FlxG.sound.music.pause();
 			Conductor.songPosition = 0;
-			if(vocals != null) {
+			/*if(vocals != null) {*/
 				vocals.pause();
 				vocals.time = 0;
 			}
@@ -1332,7 +1332,7 @@ class ChartingState extends MusicBeatState
 			curSection = 0;
 			updateGrid();
 			updateSectionUI();
-			vocals.play();
+			/*vocals.play();*/
 		};
 	}
 
@@ -1422,7 +1422,7 @@ class ChartingState extends MusicBeatState
 			}
 			else if (wname == 'voices_volume')
 			{
-				vocals.volume = nums.value;
+				/*vocals.volume = nums.value;*/
 			}
 		}
 		else if(id == FlxUIInputText.CHANGE_EVENT && (sender is FlxUIInputText)) {
@@ -1630,7 +1630,7 @@ class ChartingState extends MusicBeatState
 				FlxG.mouse.visible = false;
 				PlayState.SONG = _song;
 				FlxG.sound.music.stop();
-				if(vocals != null) vocals.stop();
+				/*if(vocals != null) vocals.stop();*/
 
 				//if(_song.stage == null) _song.stage = stageDropDown.selectedLabel;
 				gameassets.StageData.loadDirectory(_song);
@@ -1694,11 +1694,11 @@ class ChartingState extends MusicBeatState
 				if (FlxG.sound.music.playing)
 				{
 					FlxG.sound.music.pause();
-					if(vocals != null) vocals.pause();
+					/*if(vocals != null) vocals.pause();*/
 				}
 				else
 				{
-					if(vocals != null) {
+					/*if(vocals != null) {*/
 						vocals.play();
 						vocals.pause();
 						vocals.time = FlxG.sound.music.time;
@@ -1720,7 +1720,7 @@ class ChartingState extends MusicBeatState
 			{
 				FlxG.sound.music.pause();
 				FlxG.sound.music.time -= (FlxG.mouse.wheel * Conductor.stepCrochet*0.8);
-				if(vocals != null) {
+				/*if(vocals != null) {*/
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
 				}
@@ -1747,7 +1747,7 @@ class ChartingState extends MusicBeatState
 				else
 					FlxG.sound.music.time += daTime;
 
-				if(vocals != null) {
+				/*if(vocals != null) {*/
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
 				}
@@ -1840,7 +1840,7 @@ class ChartingState extends MusicBeatState
 					 feces = FlxG.sound.music.time+ daTime;
 				}
 				FlxTween.tween(FlxG.sound.music, {time:feces}, 0.1, {ease:FlxEase.circOut});
-				if(vocals != null) {
+				/*if(vocals != null) {*/
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
 				}
@@ -2077,7 +2077,7 @@ class ChartingState extends MusicBeatState
 		var et:Float = st + (Conductor.stepCrochet * steps * 2);
 
 		if (FlxG.save.data.chart_waveformInst) {
-			var sound:FlxSound = FlxG.sound.music;
+			/*var sound:FlxSound = FlxG.sound.music;*/
 			if (sound._sound != null && sound._sound.__buffer != null) {
 				var bytes:Bytes = sound._sound.__buffer.data.toBytes();
 
@@ -2094,7 +2094,7 @@ class ChartingState extends MusicBeatState
 		}
 
 		if (FlxG.save.data.chart_waveformVoices) {
-			var sound:FlxSound = vocals;
+			/*var sound:FlxSound = vocals;*/
 			if (sound._sound != null && sound._sound.__buffer != null) {
 				var bytes:Bytes = sound._sound.__buffer.data.toBytes();
 
@@ -2316,7 +2316,7 @@ class ChartingState extends MusicBeatState
 			curSection = 0;
 		}
 
-		if(vocals != null) {
+		/*if(vocals != null) {*/
 			vocals.pause();
 			vocals.time = FlxG.sound.music.time;
 		}
@@ -2350,7 +2350,7 @@ class ChartingState extends MusicBeatState
 				}*/
 
 				FlxG.sound.music.time = sectionStartTime();
-				if(vocals != null) {
+				/*if(vocals != null) {*/
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
 				}
