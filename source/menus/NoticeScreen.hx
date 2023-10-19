@@ -20,7 +20,7 @@ import options.GraphicsSettingsSubState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.sound.FlxSound;
+/*import flixel.sound.FlxSound;*/
 import flixel.math.FlxMath;
 import flixel.system.ui.FlxSoundTray;
 import lime.app.Application;
@@ -28,7 +28,7 @@ import openfl.Assets;
 
 class NoticeScreen extends MusicBeatState
 {
-	var mmtw:FlxSound = new FlxSound();
+	/*var mmtw:FlxSound = new FlxSound();*/
 	var screen:FlxSprite;
 	var timer:Int;
 	public function new() 
