@@ -464,7 +464,7 @@ class TitleState extends MusicBeatState
 		#if mobile
 		MusicBeatState.switchState(new menus.MainMenuState());
 		#elseif desktop // lol
-		MusicBeatState.switchState(new menus.PiracyScreen());
+		MusicBeatState.switchState(new menus.MainMenuState());
 		#end
 	}
 
