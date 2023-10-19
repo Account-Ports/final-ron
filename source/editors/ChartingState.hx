@@ -1229,7 +1229,7 @@ class ChartingState extends MusicBeatState
 			function() {
 				FlxG.save.data.chart_playSoundBf = playSoundBf.checked;
 			}
-		);*/
+		);
 		if (FlxG.save.data.chart_playSoundBf == null) FlxG.save.data.chart_playSoundBf = false;
 		playSoundBf.checked = FlxG.save.data.chart_playSoundBf;
 
@@ -1237,7 +1237,7 @@ class ChartingState extends MusicBeatState
 			function() {
 				FlxG.save.data.chart_playSoundDad = playSoundDad.checked;
 			}
-		);
+		);*/
 		if (FlxG.save.data.chart_playSoundDad == null) FlxG.save.data.chart_playSoundDad = false;
 		playSoundDad.checked = FlxG.save.data.chart_playSoundDad;
 
