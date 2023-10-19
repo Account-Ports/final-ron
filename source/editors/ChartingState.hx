@@ -1237,7 +1237,7 @@ class ChartingState extends MusicBeatState
 			function() {
 				FlxG.save.data.chart_playSoundDad = playSoundDad.checked;
 			}
-		);*/
+		);
 		if (FlxG.save.data.chart_playSoundDad == null) FlxG.save.data.chart_playSoundDad = false;
 		playSoundDad.checked = FlxG.save.data.chart_playSoundDad;
 
@@ -1245,7 +1245,7 @@ class ChartingState extends MusicBeatState
 			function() {
 				FlxG.save.data.chart_metronome = metronome.checked;
 			}
-		);
+		);*/
 		if (FlxG.save.data.chart_metronome == null) FlxG.save.data.chart_metronome = false;
 		metronome.checked = FlxG.save.data.chart_metronome;
 
