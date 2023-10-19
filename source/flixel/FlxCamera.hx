@@ -1314,14 +1314,14 @@ class FlxCamera extends FlxBasic
 			}
 			else
 			{
-				if (_fxShakeAxes.x)
+				/*if (_fxShakeAxes.x)
 				{
 					scroll.x += FlxG.random.float(-_fxShakeIntensity * width, _fxShakeIntensity * width) * zoom * FlxG.scaleMode.scale.x;
 				}
 				if (_fxShakeAxes.y)
 				{
 					scroll.y += FlxG.random.float(-_fxShakeIntensity * height, _fxShakeIntensity * height) * zoom * FlxG.scaleMode.scale.y;
-				}
+				}*/
 			}
 		}
 	}
