@@ -461,9 +461,9 @@ class TitleState extends MusicBeatState
 	}
 
 	function fuckyou(){
-		#if desktop
+		#if mobile
 		MusicBeatState.switchState(new menus.MainMenuState());
-		#else
+		#elseif desktop // lol
 		MusicBeatState.switchState(new menus.PiracyScreen());
 		#end
 	}
