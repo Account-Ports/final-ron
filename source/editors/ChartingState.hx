@@ -1258,7 +1258,7 @@ class ChartingState extends MusicBeatState
 			function() {
 				FlxG.save.data.chart_noAutoScroll = disableAutoScrolling.checked;
 			}
-		);*/
+		);
 		if (FlxG.save.data.chart_noAutoScroll == null) FlxG.save.data.chart_noAutoScroll = false;
 		disableAutoScrolling.checked = FlxG.save.data.chart_noAutoScroll;
 
