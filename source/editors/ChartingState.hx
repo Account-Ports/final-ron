@@ -23,7 +23,7 @@ import flixel.group.FlxSpriteGroup;
 import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
-import flixel.sound.FlxSound;
+/*import flixel.sound.FlxSound;*/
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -156,7 +156,7 @@ class ChartingState extends MusicBeatState
 
 	var tempBpm:Float = 0;
 
-	var vocals:FlxSound = null;
+	/*var vocals:FlxSound = null;*/
 
 	var leftIcon:HealthIcon;
 	var rightIcon:HealthIcon;
