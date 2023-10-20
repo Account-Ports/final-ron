@@ -1482,7 +1482,7 @@ class ChartingState extends MusicBeatState
 
 	var lastConductorPos:Float;
 	var colorSine:Float = 0;
-	override function update(elapsed:Float)
+	/*override function update(elapsed:Float)*/
 	{
 		curStep = recalculateSteps();
 
