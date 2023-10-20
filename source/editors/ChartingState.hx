@@ -1782,9 +1782,9 @@ class ChartingState extends MusicBeatState
 
 				var daTime:Float = (Conductor.stepCrochet*quants[curQuant]);//WHY DID I ROUND BEFORE THIS IS A FLOAT???
 				var cuquant = Std.int(32/quants[curQuant]);
-				for (i in 0...cuquant){
+				/*for (i in 0...cuquant){
 					datimess.push(sectionStartTime() + daTime * i);
-				}
+				}*/
 
 			if (FlxG.keys.justPressed.LEFT)
 			{
