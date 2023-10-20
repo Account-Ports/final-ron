@@ -1268,9 +1268,9 @@ class ChartingState extends MusicBeatState
 		blockPressWhileTypingOnStepper.push(instVolume);
 
 		voicesVolume = new FlxUINumericStepper(instVolume.x + 100, instVolume.y, 0.1, 1, 0, 1, 1);
-		/*voicesVolume.value = vocals.volume;*/
+		voicesVolume.value = vocals.volume;
 		voicesVolume.name = 'voices_volume';
-		blockPressWhileTypingOnStepper.push(voicesVolume);
+		blockPressWhileTypingOnStepper.push(voicesVolume);*/
 
 		tab_group_chart.add(new FlxText(metronomeStepper.x, metronomeStepper.y - 15, 0, 'BPM:'));
 		tab_group_chart.add(new FlxText(metronomeOffsetStepper.x, metronomeOffsetStepper.y - 15, 0, 'Offset (ms):'));
