@@ -1756,7 +1756,8 @@ class ChartingState extends MusicBeatState
 
 			var style = currentType;
 
-			if (FlxG.keys.pressed.SHIFT){
+			/*if (controls.SHIFT)*/
+			{
 				style = 3;
 			}
 
