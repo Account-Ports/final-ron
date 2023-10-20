@@ -1786,7 +1786,7 @@ class ChartingState extends MusicBeatState
 					datimess.push(sectionStartTime() + daTime * i);
 				}*/
 
-			if (controls.LEFT)
+			/*if (controls.LEFT)
 			{
 				--curQuant;
 				if (curQuant < 0) curQuant = 0;
