@@ -1315,7 +1315,8 @@ class ChartingState extends MusicBeatState
 		FlxG.sound.music.time = Conductor.songPosition;
 	}
 
-	function generateSong() {
+	function generateSong()
+        {
 		FlxG.sound.playMusic(Paths.inst(currentSongName), 0.6/*, false*/);
 		if (instVolume != null) FlxG.sound.music.volume = instVolume.value;
 		if (check_mute_inst != null && check_mute_inst.checked) FlxG.sound.music.volume = 0;
@@ -1333,8 +1334,8 @@ class ChartingState extends MusicBeatState
 			updateGrid();
 			updateSectionUI();
 			/*vocals.play();*/
-		};
-	}
+		{
+	};
 
 	function generateUI():Void
 	{
