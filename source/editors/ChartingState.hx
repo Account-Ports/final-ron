@@ -1756,10 +1756,10 @@ class ChartingState extends MusicBeatState
 
 			var style = currentType;
 
-			/*if (controls.SHIFT)*/
+			/*if (controls.SHIFT)
 			{
 				style = 3;
-			}
+			}*/
 
 			var conductorTime = Conductor.songPosition; //+ sectionStartTime();Conductor.songPosition / Conductor.stepCrochet;
 
