@@ -1786,14 +1786,14 @@ class ChartingState extends MusicBeatState
 					datimess.push(sectionStartTime() + daTime * i);
 				}*/
 
-			if (FlxG.keys.justPressed.LEFT)
+			if (controls.LEFT)
 			{
 				--curQuant;
 				if (curQuant < 0) curQuant = 0;
 
 				daquantspot *=  Std.int(32/quants[curQuant]);
 			}
-			if (FlxG.keys.justPressed.RIGHT)
+			if (controls.RIGHT)
 			{
 				curQuant ++;
 				if (curQuant > quants.length-1) curQuant = quants.length-1;
@@ -1801,7 +1801,7 @@ class ChartingState extends MusicBeatState
 			}
 			quant.animation.play('q', true, false, curQuant);
 			var feces:Float;
-			if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.DOWN  )
+			if (controls.UP || controls.DOWN  )
 			{
 				FlxG.sound.music.pause();
 
