@@ -1921,7 +1921,7 @@ class ChartingState extends MusicBeatState
 		"\n\nStep: " + curStep;*/
 
 		var playedSound:Array<Bool> = [false, false, false, false]; //Prevents ouchy GF sex sounds
-		curRenderedNotes.forEachAlive(function(note:Note) {
+		/*curRenderedNotes.forEachAlive(function(note:Note) {
 			note.alpha = 1;
 			if(curSelectedNote != null) {
 				var noteDataToCheck:Int = note.noteData;
@@ -1975,7 +1975,7 @@ class ChartingState extends MusicBeatState
 		}
 		lastConductorPos = Conductor.songPosition;
 		super.update(elapsed);
-	}
+	}*/
 
 	function updateZoom() {
 		zoomTxt.text = 'Zoom: ' + zoomList[curZoom] + 'x';
