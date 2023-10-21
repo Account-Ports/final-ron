@@ -1872,8 +1872,6 @@ class ChartingState extends MusicBeatState
 						updateNoteUI();
 					}
 				}*/
-			}
-			}
 			var shiftThing:Int = 1;
 			if (FlxG.keys.pressed.SHIFT)
 				shiftThing = 4;
