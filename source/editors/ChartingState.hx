@@ -1855,7 +1855,7 @@ class ChartingState extends MusicBeatState
 
 				var secStart:Float = sectionStartTime();
 				var datime = (feces - secStart) - (dastrum - secStart); //idk math find out why it doesn't work on any other section other than 0
-				if (curSelectedNote != null)
+				/*if (curSelectedNote != null)
 				{
 					var controlArray:Array<Bool> = [FlxG.keys.pressed.ONE, FlxG.keys.pressed.TWO, FlxG.keys.pressed.THREE, FlxG.keys.pressed.FOUR,
 												   FlxG.keys.pressed.FIVE, FlxG.keys.pressed.SIX, FlxG.keys.pressed.SEVEN, FlxG.keys.pressed.EIGHT];
@@ -1871,7 +1871,7 @@ class ChartingState extends MusicBeatState
 						updateGrid();
 						updateNoteUI();
 					}
-				}
+				}*/
 			}
 			}
 			var shiftThing:Int = 1;
