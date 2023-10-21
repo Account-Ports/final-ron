@@ -2320,11 +2320,11 @@ class ChartingState extends MusicBeatState
 			vocals.pause();
 			vocals.time = FlxG.sound.music.time;
 		}
-		updateCurStep();
+		/*updateCurStep();
 
 		updateGrid();
 		updateSectionUI();
-		updateWaveform();
+		updateWaveform();*/
 	}
 
 	function changeSection(sec:Int = 0, ?updateMusic:Bool = true):Void
