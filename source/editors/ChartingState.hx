@@ -1849,9 +1849,9 @@ class ChartingState extends MusicBeatState
 
 				var dastrum = 0;
 
-				if (curSelectedNote != null){
+				/*if (curSelectedNote != null){
 					dastrum = curSelectedNote[0];
-				}
+				}*/
 
 				var secStart:Float = sectionStartTime();
 				var datime = (feces - secStart) - (dastrum - secStart); //idk math find out why it doesn't work on any other section other than 0
