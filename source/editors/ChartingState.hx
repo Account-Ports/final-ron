@@ -1891,11 +1891,11 @@ class ChartingState extends MusicBeatState
 					blockPressWhileTypingOn[i].hasFocus = false;
 				}
 			}
-		}*/
+		}
 
 		_song.bpm = tempBpm;
 
-		strumLineNotes.visible = quant.visible = vortex;
+		strumLineNotes.visible = quant.visible = vortex;*/
 
 		if(FlxG.sound.music.time < 0) {
 			FlxG.sound.music.pause();
