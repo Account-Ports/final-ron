@@ -1873,7 +1873,7 @@ class ChartingState extends MusicBeatState
 					}
 				}*/
 			var shiftThing:Int = 1;
-			if (FlxG.keys.pressed.SHIFT)
+			/*if (FlxG.keys.pressed.SHIFT)
 				shiftThing = 4;
 
 			if (FlxG.keys.justPressed.RIGHT && !vortex|| FlxG.keys.justPressed.D)
@@ -1891,7 +1891,7 @@ class ChartingState extends MusicBeatState
 					blockPressWhileTypingOn[i].hasFocus = false;
 				}
 			}
-		}
+		}*/
 
 		_song.bpm = tempBpm;
 
