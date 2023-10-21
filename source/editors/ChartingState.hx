@@ -2363,10 +2363,10 @@ class ChartingState extends MusicBeatState
 		/*else
 		{
 			changeSection();
-		}*/
+		}
 		Conductor.songPosition = FlxG.sound.music.time;
 		updateWaveform();
-	}
+	}*/
 
 	function updateSectionUI():Void
 	{
