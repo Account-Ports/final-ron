@@ -1897,7 +1897,7 @@ class ChartingState extends MusicBeatState
 
 		strumLineNotes.visible = quant.visible = vortex;*/
 
-		if(FlxG.sound.music.time < 0) {
+		/*if(FlxG.sound.music.time < 0) {
 			FlxG.sound.music.pause();
 			FlxG.sound.music.time = 0;
 		}
@@ -1905,7 +1905,7 @@ class ChartingState extends MusicBeatState
 			FlxG.sound.music.pause();
 			FlxG.sound.music.time = 0;
 			changeSection();
-		}
+		}*/
 		Conductor.songPosition = FlxG.sound.music.time;
 		strumLine.y = getYfromStrum((Conductor.songPosition - sectionStartTime()) / zoomList[curZoom] % (Conductor.stepCrochet * _song.notes[curSection].lengthInSteps));
 		camPos.y = strumLine.y;
