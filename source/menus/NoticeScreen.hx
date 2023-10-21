@@ -57,13 +57,13 @@ class NoticeScreen extends MusicBeatState
 		if (ClientPrefs.warnings)
 		{
 			var songName:String = ClientPrefs.pauseMusic;
-			mmtw = new FlxSound();
+			lol = new FlxSound();
 			if (songName != 'None' && songName != null) {
-				mmtw.loadEmbedded(Paths.music(Paths.formatToSongPath("Tea Time").toLowerCase()), true, true);
+					lol.loadEmbedded(Paths.music(Paths.formatToSongPath("Tea Time").toLowerCase()), true, true);
 			}
-			mmtw.volume = 0;
-			mmtw.play(false, FlxG.random.int(0, Std.int(mmtw.length / 2))); // idk why it starts at a random point 
-			FlxG.sound.list.add(mmtw);
+			lol.volume = 0;
+			lol.play(false, FlxG.random.int(0, Std.int(mmtw.length / 2))); // idk why it starts at a random point 
+			FlxG.sound.list.add(lol);
 			addShader(FlxG.camera,"glitchsmh");
 			addShader(FlxG.camera, "vhs");
 			addShader(FlxG.camera, "fake CRT");
@@ -108,12 +108,11 @@ class NoticeScreen extends MusicBeatState
 	{
 		super.update(elapsed);
 		timer += 1;
-		if (mmtw.volume < .5) {
-			mmtw.volume += elapsed * .01;
+		if (lol.volume < .5) {
+			lol.volume += elapsed * .01;
 		}
 		
 		if (controls.ACCEPT){
-			mmtw.destroy();
 			FlxG.sound.play(Paths.sound('resumeSong'));
 			FlxTween.tween(FlxG.camera, {zoom: 0.5, angle: 45}, 0.5, {ease: FlxEase.quadIn});
 			MusicBeatState.switchState(new menus.TitleState());
@@ -121,8 +120,6 @@ class NoticeScreen extends MusicBeatState
 	}
 	override function destroy()
 	{
-		mmtw.destroy();
-
 		super.destroy();
 	}
 }
