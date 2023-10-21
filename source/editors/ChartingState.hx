@@ -2361,9 +2361,9 @@ class ChartingState extends MusicBeatState
 			updateSectionUI();
 		}
 		/*else
-		{*/
+		{
 			changeSection();
-		}
+		}*/
 		Conductor.songPosition = FlxG.sound.music.time;
 		updateWaveform();
 	}
