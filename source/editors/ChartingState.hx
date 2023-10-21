@@ -1842,10 +1842,10 @@ class ChartingState extends MusicBeatState
 					 feces = FlxG.sound.music.time+ daTime;
 				}
 				FlxTween.tween(FlxG.sound.music, {time:feces}, 0.1, {ease:FlxEase.circOut});
-				/*if(vocals != null) {*/
+				/*if(vocals != null) {
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
-				}
+				}*/
 
 				var dastrum = 0;
 
