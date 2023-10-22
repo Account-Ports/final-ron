@@ -69,8 +69,7 @@
 	<section if="NO_PRELOAD_ALL">
 		<library name="songs"         preload="true" />
 	</section>
-	
-	<assets path="dlls/"                rename=''               if="VIDEOS_ALLOWED windows" />
+
 	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
 	<assets path="assets"         preload="true"         exclude="*.mp3" unless="web"/>
