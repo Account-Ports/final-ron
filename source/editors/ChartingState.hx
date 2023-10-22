@@ -1494,7 +1494,7 @@ class ChartingState extends MusicBeatState
 		//{
 			// FlxG.sound.music.pause();
 			// FlxG.sound.music.time = 0;
-			changeSection();
+			// changeSection();
 		}
 		// Conductor.songPosition = FlxG.sound.music.time;
 		_song.song = UI_songTitle.text;
