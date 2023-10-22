@@ -1493,7 +1493,7 @@ class ChartingState extends MusicBeatState
 		//else if(FlxG.sound.music.time > FlxG.sound.music.length)
 		//{
 			// FlxG.sound.music.pause();
-			FlxG.sound.music.time = 0;
+			// FlxG.sound.music.time = 0;
 			changeSection();
 		}
 		// Conductor.songPosition = FlxG.sound.music.time;
