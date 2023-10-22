@@ -1495,9 +1495,9 @@ class ChartingState extends MusicBeatState
 			// FlxG.sound.music.pause();
 			// FlxG.sound.music.time = 0;
 			// changeSection();
-		}
+		//}
 		// Conductor.songPosition = FlxG.sound.music.time;
-		_song.song = UI_songTitle.text;
+		// _song.song = UI_songTitle.text;
 
 		// strumLine.y = getYfromStrum((Conductor.songPosition - sectionStartTime()) / zoomList[curZoom] % (Conductor.stepCrochet * _song.notes[curSection].lengthInSteps));
 		/*for (i in 0...8){
