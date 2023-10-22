@@ -57,13 +57,13 @@ class NoticeScreen extends MusicBeatState
 		if (ClientPrefs.warnings)
 		{
 			var songName:String = ClientPrefs.pauseMusic;
-			lol = new FlxSound();
+			// lol = new FlxSound();
 			if (songName != 'None' && songName != null) {
-					lol.loadEmbedded(Paths.music(Paths.formatToSongPath("Tea Time").toLowerCase()), true, true);
+					// lol.loadEmbedded(Paths.music(Paths.formatToSongPath("Tea Time").toLowerCase()), true, true);
 			}
-			lol.volume = 0;
-			lol.play(false, FlxG.random.int(0, Std.int(mmtw.length / 2))); // idk why it starts at a random point 
-			FlxG.sound.list.add(lol);
+			// lol.volume = 0;
+			// lol.play(false, FlxG.random.int(0, Std.int(mmtw.length / 2))); // idk why it starts at a random point 
+			// FlxG.sound.list.add(lol);
 			addShader(FlxG.camera,"glitchsmh");
 			addShader(FlxG.camera, "vhs");
 			addShader(FlxG.camera, "fake CRT");
@@ -108,9 +108,9 @@ class NoticeScreen extends MusicBeatState
 	{
 		super.update(elapsed);
 		timer += 1;
-		if (lol.volume < .5) {
+		/*if (lol.volume < .5) {
 			lol.volume += elapsed * .01;
-		}
+		}*/
 		
 		if (controls.ACCEPT){
 			FlxG.sound.play(Paths.sound('resumeSong'));
