@@ -1483,7 +1483,7 @@ class ChartingState extends MusicBeatState
 	var lastConductorPos:Float;
 	var colorSine:Float = 0;
 	/*override function update(elapsed:Float)*/
-	{
+	//{
 		// curStep = recalculateSteps();
 
 		if(FlxG.sound.music.time < 0) {
