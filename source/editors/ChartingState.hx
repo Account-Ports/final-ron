@@ -2733,7 +2733,7 @@ class ChartingState extends MusicBeatState
 		updateGrid();
 	}
 
-	public function doANoteThing(cs, d, style){
+	/*public function doANoteThing(cs, d, style){
 		var delnote = false;
 		if(strumLineNotes.members[d].overlaps(curRenderedNotes))
 		{
@@ -2751,7 +2751,7 @@ class ChartingState extends MusicBeatState
 		if (!delnote){
 			addNote(cs, d, style);
 		}
-	}
+	}*/
 	function clearSong():Void
 	{
 		for (daSection in 0..._song.notes.length)
