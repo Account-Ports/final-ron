@@ -1504,7 +1504,7 @@ class ChartingState extends MusicBeatState
 			strumLineNotes.members[i].y = strumLine.y;
 		}*/
 
-		FlxG.mouse.visible = true;//cause reasons. trust me
+		// FlxG.mouse.visible = true;//cause reasons. trust me
 		// camPos.y = strumLine.y;
 		/*if(!disableAutoScrolling.checked) {*/
 			if (Math.ceil(strumLine.y) >= (gridBG.height / 2))
