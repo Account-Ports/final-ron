@@ -1426,7 +1426,7 @@ class ChartingState extends MusicBeatState
 				/*vocals.volume = nums.value;*/
 			}
 		}
-		else if(id == FlxUIInputText.CHANGE_EVENT && (sender is FlxUIInputText)) {
+		// else if(id == FlxUIInputText.CHANGE_EVENT && (sender is FlxUIInputText)) {
 			if(sender == noteSplashesInputText) {
 				_song.splashSkin = noteSplashesInputText.text;
 			}
