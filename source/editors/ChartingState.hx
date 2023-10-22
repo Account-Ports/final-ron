@@ -1486,11 +1486,12 @@ class ChartingState extends MusicBeatState
 	//{
 		// curStep = recalculateSteps();
 
-		if(FlxG.sound.music.time < 0) {
+		/*if(FlxG.sound.music.time < 0) {
 			FlxG.sound.music.pause();
 			FlxG.sound.music.time = 0;
-		}
-		else if(FlxG.sound.music.time > FlxG.sound.music.length) {
+		}*/
+		//else if(FlxG.sound.music.time > FlxG.sound.music.length)
+		//{
 			FlxG.sound.music.pause();
 			FlxG.sound.music.time = 0;
 			changeSection();
