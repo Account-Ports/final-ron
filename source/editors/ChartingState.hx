@@ -1507,7 +1507,7 @@ class ChartingState extends MusicBeatState
 		// FlxG.mouse.visible = true;//cause reasons. trust me
 		// camPos.y = strumLine.y;
 		/*if(!disableAutoScrolling.checked) {*/
-			if (Math.ceil(strumLine.y) >= (gridBG.height / 2))
+			/*if (Math.ceil(strumLine.y) >= (gridBG.height / 2))
 			{
 				//trace(curStep);
 				//trace((_song.notes[curSection].lengthInSteps) * (curSection + 1));
@@ -1521,7 +1521,7 @@ class ChartingState extends MusicBeatState
 				changeSection(curSection + 1, false);
 			} else if(strumLine.y < -10) {
 				changeSection(curSection - 1, false);
-			}
+			}*/
 		/*}*/
 		/*FlxG.watch.addQuick('daBeat', curBeat);
 		FlxG.watch.addQuick('daStep', curStep);*/
