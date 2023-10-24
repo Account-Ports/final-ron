@@ -1527,29 +1527,29 @@ class ChartingState extends MusicBeatState
 		FlxG.watch.addQuick('daStep', curStep);*/
 
 
-		if (FlxG.mouse.justPressed)
-		{
+		//if (FlxG.mouse.justPressed)
+		//{
 			/*if (FlxG.mouse.overlaps(curRenderedNotes))
 			{*/
-				curRenderedNotes.forEachAlive(function(note:Note)
-				{
-					if (FlxG.mouse.overlaps(note))
-					{
-						if (FlxG.keys.pressed.CONTROL)
-						{
-							selectNote(note);
-						}
-						else if (FlxG.keys.pressed.ALT)
-						{
-							selectNote(note);
-							curSelectedNote[3] = noteTypeIntMap.get(currentType);
-							updateGrid();
-						}
-						else
-						{
+				//curRenderedNotes.forEachAlive(function(note:Note)
+				//{
+					//if (FlxG.mouse.overlaps(note))
+					//{
+						//if (FlxG.keys.pressed.CONTROL)
+						//{
+							//selectNote(note);
+						//}
+						//else if (FlxG.keys.pressed.ALT)
+						//{
+							//selectNote(note);
+							//curSelectedNote[3] = noteTypeIntMap.get(currentType);
+							//updateGrid();
+						//}
+						//else
+						//{
 							//trace('tryin to delete note...');
-							deleteNote(note);
-						}
+							//deleteNote(note);
+						/*}
 					}
 				});
 			}
@@ -1564,7 +1564,7 @@ class ChartingState extends MusicBeatState
 					addNote();
 				}
 			}
-		}
+		}*/•
 
 		/*if (FlxG.mouse.x > gridBG.x
 			&& FlxG.mouse.x < gridBG.x + gridBG.width
