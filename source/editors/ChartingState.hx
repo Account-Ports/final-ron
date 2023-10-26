@@ -1581,7 +1581,7 @@ class ChartingState extends MusicBeatState
 			dummyArrow.visible = false;
 		}*/
 
-		var blockInput:Bool = false;
+		/*var blockInput:Bool = false;*/
 		/*for (inputText in blockPressWhileTypingOn) {
 			if(inputText.hasFocus) {
 				FlxG.sound.muteKeys = [];
@@ -1592,7 +1592,7 @@ class ChartingState extends MusicBeatState
 			}
 		}*/
 
-		if(!blockInput) {
+		/*if(!blockInput) {
 			/*for (stepper in blockPressWhileTypingOnStepper) {
 				@:privateAccess
 				var leText:Dynamic = stepper.text_field;
@@ -1605,7 +1605,7 @@ class ChartingState extends MusicBeatState
 					break;
 				}
 			}*/
-		}
+		/*}*/
 
 		if(!blockInput) {
 			FlxG.sound.muteKeys = menus.TitleState.muteKeys;
